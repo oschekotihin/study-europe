@@ -1,13 +1,27 @@
+@font-face {
+  font-family: 'ECSquareSansPro';
+  src: url("../fonts/ECSquareSansPro-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ECSquareSansPro-Regular.woff") format("woff"), url("../fonts/ECSquareSansPro-Regular.ttf") format("truetype"), url("../fonts/ECSquareSansPro-Regular.svg#ECSquareSansPro-Regular") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ECSquareSansPro';
+  src: url("../fonts/ECSquareSansPro-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/ECSquareSansPro-Medium.woff") format("woff"), url("../fonts/ECSquareSansPro-Medium.ttf") format("truetype"), url("../fonts/ECSquareSansPro-Medium.svg#ECSquareSansPro-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal; }
+
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: 'ECSquareSansPro';
+  font-weight: 400;
+  font-style: normal; }
 
 p,
 div {
   line-height: 1.25;
-  color: #FFF;
-  font-family: 'ecsquaresanspro-regular'; }
+  color: #FFF; }
 
 a,
 button,
@@ -99,7 +113,7 @@ hr {
       font-size: 28px;
       margin-top: 16px;
       color: #FFF;
-      font-family: 'ecsquaresanspro-medium'; }
+      font-weight: 500; }
   .header__wrapper_search {
     position: relative;
     z-index: 100; }
@@ -213,8 +227,8 @@ hr {
     color: #FFF;
     padding-top: 10px;
     text-decoration: none;
-    font-family: 'ecsquaresanspro-medium';
     font-size: 20px;
+    font-weight: 500;
     border-radius: 3px;
     margin: 0 auto;
     -webkit-transition: background 1s ease; }
@@ -306,8 +320,8 @@ hr {
       color: #FFF;
       padding-top: 10px;
       text-decoration: none;
-      font-family: 'ecsquaresanspro-medium';
       font-size: 20px;
+      font-weight: 500;
       border-radius: 3px;
       margin: 0 auto;
       border: 2px solid;
@@ -316,7 +330,7 @@ hr {
       .countries__wrapper_button a:hover {
         color: #cc4302;
         background-color: #FFF;
-        border: none; }
+        border: 2px solid #fff; }
 
 .subjects {
   height: 475px;
@@ -392,8 +406,8 @@ hr {
       color: #FFF;
       padding-top: 10px;
       text-decoration: none;
-      font-family: 'ecsquaresanspro-medium';
       font-size: 20px;
+      font-weight: 500;
       border-radius: 3px;
       margin: 0 auto;
       animation: background 1s infinite alternate; }

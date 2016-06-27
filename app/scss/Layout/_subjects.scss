@@ -5,7 +5,7 @@
     @media screen and (max-width: $break-large) {
       height: 584px;
     }
-    @media screen and (max-width: $break-medium) {
+    @media screen and (max-width: $break-ml) {
       height: 775px;
     }
 
@@ -19,7 +19,7 @@
     font-size: 36px;
     text-align: center;
     margin: 0;
-      @media screen and (max-width: $break-custom) {
+      @media screen and (max-width: $break-medium) {
         font-size: 22px;
       }
     }
@@ -27,8 +27,11 @@
     color: #666666;
     font-size: 20px;
     text-align: center;
-      @media screen and (max-width: $break-custom) {
+      @media screen and (max-width: $break-medium) {
         font-size: 16px;
+      }
+      @media screen and (max-width: $break-min) {
+        margin-top: 2px;
       }
     }
   }
@@ -40,7 +43,8 @@
   flex-wrap: wrap;
   align-items: flex-start;
   align-content: space-around;
-    @media screen and (max-width: $break-medium) {
+  padding: 0 20px;
+    @media screen and (max-width: $break-ml) {
       display: flex;
       justify-content: center;
       flex-direction: row;
@@ -54,7 +58,10 @@
     clear: both;
     }
     div{
-      margin-right: 60px;
+      margin-right: 51px;
+      @media screen and (max-width: $break-min) {
+        margin: 0;
+      }
       :last-child{
         margin-right: 0px;
       }
@@ -73,6 +80,10 @@
     margin-top: 20px;
       @media screen and (max-width: $break-custom) {
         position: static;
+        margin: 25px 0 0 30px;
+      }
+      @media screen and (max-width: $break-ms) {
+        margin: 0;
       }
     a{
       width: 190px;

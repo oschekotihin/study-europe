@@ -1,0 +1,218 @@
+.startcontainer {
+    margin: 0 0 0 70px;
+    text-shadow: 1px 1px 2px hsl(0, 0%, 0%);
+}
+.startslides {
+    position: relative;
+    width: 70%;
+    float: left;
+}
+.starttitle {
+    background: hsla(202, 86%, 31%, 0.8);
+    color: hsl(0, 0%, 100%);
+    left: 0;
+    padding: 0px 20px 0px 40px;
+    position: absolute;
+    top: 20px;
+    z-index: 11;
+    max-width: 740px;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
+.starttitle > h1 {
+    font-size: 45px;
+    line-height: 55px;
+    margin: 0px;
+    text-transform: uppercase;
+    font-family: ecsmedium, sans-serif;
+    letter-spacing: 2px;
+}
+.starttiles {
+    float: left;
+    width: 30%;
+    font-family: ecsregular, sans-serif;
+}
+.stile {
+	height: 22vh;
+	overflow: hidden;
+	-moz-box-shadow:inset 2px 3px 1px -1px #000000;
+   -webkit-box-shadow: inset 2px 3px 1px -1px #000000;
+   box-shadow:inset 2px 3px 1px -1px #000000;
+}
+.stile > div {
+	color: white;
+	height: 22vh;
+	position: relative;
+	padding: 0 10px;
+}
+.stile > div > .text-right {
+	bottom: 10px;
+    position: absolute;
+    right: 20px;
+}
+.stile h3 {
+    margin: 0;
+    padding: 15px 0 0;
+    font-family: ecsmedium, sans-serif;
+    text-transform: none;
+    letter-spacing: 2px;
+    font-size: 24px;
+}
+.stile p{
+	line-height: 28px;
+}
+.lmore{
+	text-align: right;
+	color: white;
+	text-transform: uppercase;
+	font-family: ecsmedium, sans-serif;
+	letter-spacing: 2px;
+	font-size: 15px;
+}
+.lmore:hover{	
+	color: white;
+}
+.lmore span {
+    left: 5px;
+    top: 2px;
+}
+
+.universitytile{
+	background: url("../img/start/universitytile.jpg") no-repeat scroll center center / cover;
+}
+.universitytile > div {
+	background: hsla(325, 100%, 31%, 0.7);
+}
+.countriestile{
+	background: url("../img/start/countriestile.jpg") no-repeat scroll center center / cover;
+}
+.countriestile > div {
+	background: hsla(128, 52%, 47%, 0.7);
+}
+.specialitiestile{
+	background: url("../img/start/specialitiestile.jpg") no-repeat scroll center center / cover;
+}
+.specialitiestile > div {
+	background: hsla(19, 89%, 54%, 0.7);
+}
+.abouttile{
+	background: url("../img/start/abouttile.jpg") no-repeat scroll center center / cover;
+}
+.abouttile > div {
+	background: hsla(204, 100%, 37%, 0.7);
+}
+.startlogos {
+    height: 8vh;
+    margin: 2vh 0 0;
+    padding: 10px;
+    text-align: center;
+}
+.startlogos img {
+}
+.startlogos .eu-logo{
+	height: 100%;
+}
+.startlogos .dai-logo{
+	height: 40%;
+	margin: 0 5%;
+}
+.startlogos .ehef-logo{
+	height: 100%;
+	
+}
+
+
+
+
+
+
+/*Carousel HACKS*/
+#start-carousel .carousel {
+    height: 100vh;
+ }
+#start-carousel .carousel-inner > .item > a > img, .carousel-inner > .item > img{
+    display: block;
+    height: 100vh;
+    margin: auto;
+    max-width: none;
+}
+#start-carousel .carousel-caption, #start-carousel .carousel-caption p{
+	font-size: 24px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+#start-carousel .lmore{
+	text-align: right;
+	color: white;
+	text-transform: uppercase;
+	font-family: ecsmedium, sans-serif;
+	letter-spacing: 2px;
+	font-size: 18px;
+}
+#start-carousel .lmore:hover{	
+	color: white;
+}
+#start-carousel .lmore span {
+    left: 5px;
+    top: 3px;
+}
+#start-carousel .carousel-indicators li {
+   
+   
+    height: 15px;
+   
+    width: 15px;
+}
+#start-carousel .carousel-indicators .active {
+    background-color: #0b6192;
+    height: 16px;
+    width: 16px;
+}
+#start-carousel .carousel-indicators {
+    bottom: 0;
+}
+#start-carousel .carousel-caption h1{
+	margin: 50px 0;
+}
+#start-carousel .carousel-caption iframe{
+	min-height: 50vh;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+.startcontainer {
+    margin: 0;
+}
+.startslides {
+   
+    width: 100%;
+    
+}
+.starttiles {
+   
+    width: 100%;
+}
+.starttitle > h1 {
+    font-size: 22px;
+    line-height: 35px;
+    margin: 0px;
+    text-transform: uppercase;
+    font-family: ecsmedium, sans-serif;
+    letter-spacing: 1px;
+}
+.starttitle {
+    top: 40px;
+}
+#start-carousel .carousel-caption iframe{
+	min-height: 30vh;
+}
+#start-carousel .carousel-caption, #start-carousel .carousel-caption p{
+	font-size: 15px;
+	letter-spacing: 1px;
+	line-height: 22px;
+}
+}

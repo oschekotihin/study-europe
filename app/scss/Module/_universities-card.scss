@@ -1,8 +1,8 @@
 .universities__wrapper_card .views-row{
-  margin-right: 16px;
+  margin-right: 40px;
   position: relative;
   min-height: 1px;
-  padding-right: 15px;
+  width: 280px;
 }
 .universities__wrapper_card .views-row:last-child{
   margin: 0;
@@ -11,7 +11,7 @@
   text-transform: uppercase;
   position: relative;
   border: 1px solid #fff;
-  height: 275px;
+  height: 235px;
   overflow: hidden;
   margin-bottom: 15px;
   -webkit-box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.75);
@@ -20,7 +20,7 @@
 }
 .name {
   position: relative;
-  height: 200px;
+  height: 160px;
 }
 .name img{
   vertical-align: middle;

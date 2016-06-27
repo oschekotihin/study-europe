@@ -12,11 +12,6 @@ var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
 
-// Basic Gulp task syntax
-gulp.task('hello', function() {
-  console.log('Hello Zell!');
-})
-
 // Development Tasks 
 // -----------------
 
@@ -27,7 +22,7 @@ gulp.task('browserSync', function() {
       baseDir: 'app'
     }
   })
-})
+});
 
 gulp.task('sass', function() {
   return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
@@ -36,14 +31,14 @@ gulp.task('sass', function() {
     .pipe(browserSync.reload({ // Reloading with Browser Sync
       stream: true
     }));
-})
+});
 
 // Watchers
 gulp.task('watch', function() {
   gulp.watch('app/scss/**/*.scss', ['sass']);
   gulp.watch('app/*.html', browserSync.reload);
   gulp.watch('app/js/**/*.js', browserSync.reload);
-})
+});
 
 // Optimization Tasks 
 // ------------------
@@ -72,14 +67,14 @@ gulp.task('images', function() {
 gulp.task('fonts', function() {
   return gulp.src('app/fonts/**/*')
     .pipe(gulp.dest('dist/fonts'))
-})
+});
 
 // Cleaning 
 gulp.task('clean', function() {
   return del.sync('dist').then(function(cb) {
     return cache.clearAll(cb);
   });
-})
+});
 
 gulp.task('clean:dist', function() {
   return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*']);
@@ -92,7 +87,7 @@ gulp.task('default', function(callback) {
   runSequence(['sass', 'browserSync', 'watch'],
     callback
   )
-})
+});
 
 gulp.task('build', function(callback) {
   runSequence(
@@ -100,4 +95,4 @@ gulp.task('build', function(callback) {
     ['sass', 'useref', 'images', 'fonts'],
     callback
   )
-})
+});

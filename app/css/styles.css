@@ -195,31 +195,62 @@ hr {
   height: 565px;
   background: url(/images/pattern_light.png);
   background-size: 500px 333px; }
-  .universities__wrapper_head p:nth-child(1) {
-    color: #4e5199;
-    font-size: 36px;
-    text-align: center;
-    margin: 0; }
-  .universities__wrapper_head p:nth-child(2) {
-    color: #666666;
-    font-size: 20px;
-    text-align: center; }
-  .universities__wrapper_button a {
-    width: 190px;
-    height: 35px;
-    display: block;
-    text-align: center;
-    background: linear-gradient(to top, #178fff, #27a4ff);
-    color: #FFF;
-    padding-top: 10px;
-    text-decoration: none;
-    font-family: 'ecsquaresanspro-medium';
-    font-size: 20px;
-    border-radius: 3px;
-    margin: 0 auto;
-    -webkit-transition: background 1s ease; }
-    .universities__wrapper_button a :hover {
-      background: linear-gradient(to top, #f78e3d, #f9a354); }
+  @media screen and (max-width: 1023px) {
+    .universities {
+      height: 767px; } }
+  @media screen and (max-width: 768px) {
+    .universities {
+      height: 990px; } }
+  .universities__wrapper_head {
+    padding-top: 65px; }
+    @media screen and (max-width: 768px) {
+      .universities__wrapper_head {
+        padding-top: 33px; } }
+    .universities__wrapper_head p:nth-child(1) {
+      color: #4e5199;
+      font-size: 36px;
+      text-align: center;
+      margin: 0; }
+      @media screen and (max-width: 950px) {
+        .universities__wrapper_head p:nth-child(1) {
+          font-size: 22px; } }
+    .universities__wrapper_head p:nth-child(2) {
+      color: #666666;
+      font-size: 20px;
+      text-align: center; }
+      @media screen and (max-width: 950px) {
+        .universities__wrapper_head p:nth-child(2) {
+          font-size: 16px; } }
+  .universities__wrapper_card {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: space-around;
+    box-sizing: border-box; }
+  .universities__wrapper_button {
+    position: relative;
+    left: 40%;
+    margin-top: 20px; }
+    @media screen and (max-width: 950px) {
+      .universities__wrapper_button {
+        position: static; } }
+    .universities__wrapper_button a {
+      width: 190px;
+      height: 35px;
+      display: block;
+      text-align: center;
+      background: linear-gradient(to top, #178fff, #27a4ff);
+      color: #FFF;
+      padding-top: 10px;
+      text-decoration: none;
+      font-family: 'ecsquaresanspro-medium';
+      font-size: 20px;
+      border-radius: 3px;
+      margin: 0 auto; }
+      .universities__wrapper_button a :hover {
+        background: linear-gradient(to top, #f78e3d, #f9a354); }
 
 .countries {
   height: 450px;
@@ -403,3 +434,105 @@ hr {
 .nav li {
   display: inline-block;
   list-style-type: none; }
+
+.universities__wrapper_card .views-row {
+  margin-right: 16px;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px; }
+
+.universities__wrapper_card .views-row:last-child {
+  margin: 0; }
+
+.result {
+  text-transform: uppercase;
+  position: relative;
+  border: 1px solid #fff;
+  height: 275px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  -webkit-box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.75); }
+
+.name {
+  position: relative;
+  height: 200px; }
+
+.name img {
+  vertical-align: middle; }
+
+.result-country {
+  font-family: ecsregular,sans-serif;
+  background: #fff;
+  padding: 7px 5px 7px 30px;
+  position: absolute;
+  right: 0;
+  top: 125px;
+  z-index: 1; }
+
+.flag {
+  border-radius: 19px;
+  bottom: -4px;
+  height: 36px;
+  overflow: hidden;
+  position: absolute;
+  left: -25px;
+  width: 36px;
+  z-index: 10; }
+
+.flag img {
+  height: 34px;
+  width: 34px; }
+
+.result-country h6 {
+  margin: 0;
+  font-size: 12px;
+  color: #337ab7; }
+
+.result-university {
+  font-family: ecsmedium,sans-serif;
+  color: #fff;
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 0px 0 5px 8px; }
+
+.result-university span {
+  position: absolute;
+  bottom: 0; }
+
+.info {
+  background: #00a09e;
+  height: 75px;
+  margin-top: 1px; }
+
+.result-city {
+  bottom: 0;
+  color: white;
+  font-family: ecsthin,sans-serif;
+  margin: 0;
+  padding: 0 85px 0 5px;
+  position: absolute;
+  width: 100%; }
+
+.result-icons {
+  background: #fff;
+  padding-top: 3px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 84px;
+  min-height: 80px; }
+
+.result-icons img {
+  width: 20px; }
+
+.result-icons p {
+  font-size: 10px;
+  margin-top: 5px;
+  text-align: center;
+  line-height: 1;
+  color: #444; }

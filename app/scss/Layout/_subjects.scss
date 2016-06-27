@@ -1,5 +1,5 @@
 @include block('subjects') {
-  height: 475px;
+  // height: 475px;
   background: url(/images/pattern_light.png);
   background-size: 500px 333px;
     @media screen and (max-width: $break-large) {
@@ -71,6 +71,7 @@
     position: relative;
     left: 40%;
     margin-top: 20px;
+    margin-bottom: 58px;
       @media screen and (max-width: $break-custom) {
         position: static;
       }

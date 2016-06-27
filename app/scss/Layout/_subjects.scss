@@ -1,0 +1,96 @@
+@include block('subjects') {
+  height: 475px;
+  background: url(/images/pattern_light.png);
+  background-size: 500px 333px;
+    @media screen and (max-width: $break-large) {
+      height: 584px;
+    }
+    @media screen and (max-width: $break-medium) {
+      height: 775px;
+    }
+
+  @include element('wrapper_head') {
+    padding-top: 65px;
+    @media screen and (max-width: $break-medium) {
+      padding-top: 33px;
+    }
+    p:nth-child(1){
+    color: #4e5199;
+    font-size: 36px;
+    text-align: center;
+    margin: 0;
+      @media screen and (max-width: $break-custom) {
+        font-size: 22px;
+      }
+    }
+    p:nth-child(2){
+    color: #666666;
+    font-size: 20px;
+    text-align: center;
+      @media screen and (max-width: $break-custom) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @include element('wrapper_card') {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: space-around;
+    @media screen and (max-width: $break-medium) {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      align-content: space-around
+    }
+    :after{
+    display:block;
+    content: " ";
+    clear: both;
+    }
+    div{
+      margin-right: 60px;
+      :last-child{
+        margin-right: 0px;
+      }
+    }
+    p{
+      width: 110px;
+      text-align: center;
+      font-size: 16px;
+      color: #333333;
+    }
+  }  
+
+  @include element('wrapper_button') {
+    position: relative;
+    left: 40%;
+    margin-top: 20px;
+      @media screen and (max-width: $break-custom) {
+        position: static;
+      }
+    a{
+      width: 190px;
+      height: 35px;
+      display: block;
+      text-align: center;
+      background: linear-gradient(to top, #178fff, #27a4ff);
+      color: #FFF;
+      padding-top: 10px;
+      text-decoration: none;
+      font-family: 'ecsquaresanspro-medium';
+      font-size: 20px;
+      border-radius: 3px;
+      margin: 0 auto;
+      animation: background 1s infinite alternate;
+      :hover{
+        background: linear-gradient(to top, #f78e3d, #f9a354);
+      }
+    }
+  }
+}

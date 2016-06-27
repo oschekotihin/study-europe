@@ -3,12 +3,16 @@ html {
 }
 
 body {
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 p, 
 div {
 	line-height: 1.25;
+	color: #FFF;
+	font-family: 'ecsquaresanspro-regular';
 }
 
 a,
@@ -27,9 +31,12 @@ hr {
 }
 
 .wrapper{
-	max-width: 1050px;
-	width: 100%;
-	margin: 0 auto;
+    max-width: 1050px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+    z-index: 100;
 }
 
 .clear{

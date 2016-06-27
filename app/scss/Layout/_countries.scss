@@ -1,0 +1,115 @@
+@include block('countries') {
+  height: 450px;
+  background-color: #f89a47;
+  position: relative;
+  @media screen and (max-width: $break-large) {
+      height: 510px;
+    }
+  @media screen and (max-width: $break-medium) {
+    height: 660px;
+  }
+
+  &:after {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    display: block;
+    content: " ";
+    height: 100%;
+    background: linear-gradient(to right, rgba(204,67,2,0.35) 0%,rgba(204,67,2,0) 30%,rgba(204,67,2,0)
+    70%,rgba(204,67,2,0.35) 100%);
+  }
+
+  &:before {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    display: block;
+    content: " ";
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(226,110,36,1) 0%,rgba(248,154,71,1) 100%);
+  }
+
+  @include element('wrapper_head') {
+    padding-top: 65px;
+    @media screen and (max-width: $break-medium) {
+      padding-top: 33px;
+    }
+    p:nth-child(1){
+      font-size: 36px;
+      text-align: center;
+      margin: 0;
+      @media screen and (max-width: $break-custom) {
+          font-size: 22px;
+        }
+    }
+    p:nth-child(2){
+      font-size: 20px;
+      text-align: center;
+      @media screen and (max-width: $break-custom) {
+          font-size: 16px;
+      }
+    }
+  }
+
+  @include element('wrapper_card') {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: space-around;
+    @media screen and (max-width: $break-medium) {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      align-content: space-around
+    }
+    div{
+      margin-right: 60px
+    }
+    div:last-child{
+      margin-right: 0
+    }
+    p{
+      width: 110px;
+      text-align: center;
+    }
+    &:after{
+      content:" ";
+      display:block;
+      clear:both;
+    }
+  } 
+  @include element('wrapper_button') {
+    position: relative;
+    left: 40%;
+    margin-top: 20px;
+    @media screen and (max-width: $break-custom) {
+      position: static;
+    }
+    a{
+      width: 190px;
+      height: 35px;
+      display: block;
+      text-align: center;
+      color: #FFF;
+      padding-top: 10px;
+      text-decoration: none;
+      font-family: 'ecsquaresanspro-medium';
+      font-size: 20px;
+      border-radius: 3px;
+      margin: 0 auto;
+      border: 2px solid;
+      border-radius: 3px;
+      -webkit-transition: background 1s ease;
+      &:hover{
+        color: #cc4302;
+        background-color: #FFF;
+        border: none;
+      }
+    }
+  } 
+}

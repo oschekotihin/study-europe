@@ -1,0 +1,40 @@
+@include block('universities') {
+  height: 565px;
+  background: url(/images/pattern_light.png);
+  background-size: 500px 333px;
+
+  @include element('wrapper_head') {
+    p:nth-child(1){
+      color: #4e5199;
+      font-size: 36px;
+      text-align: center;
+      margin: 0;
+    }
+    p:nth-child(2){
+      color: #666666;
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+
+  @include element('wrapper_button') {
+    a{
+      width: 190px;
+      height: 35px;
+      display: block;
+      text-align: center;
+      background: linear-gradient(to top, #178fff, #27a4ff);
+      color: #FFF;
+      padding-top: 10px;
+      text-decoration: none;
+      font-family: 'ecsquaresanspro-medium';
+      font-size: 20px;
+      border-radius: 3px;
+      margin: 0 auto;
+      -webkit-transition: background 1s ease;
+      :hover{
+        background: linear-gradient(to top, #f78e3d, #f9a354);
+      }
+    }
+  }  
+}

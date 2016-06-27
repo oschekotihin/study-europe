@@ -11,9 +11,17 @@ var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
+var babel = require("gulp-babel");
 
 // Development Tasks 
 // -----------------
+
+// Transpile JS
+gulp.task('babel', function () {
+  return gulp.src('app/js/**/*.js')
+    .pipe(babel())
+    .pipe(gulp.dest('dist/js'));
+});
 
 // Start browserSync server
 gulp.task('browserSync', function() {
@@ -92,7 +100,7 @@ gulp.task('default', function(callback) {
 gulp.task('build', function(callback) {
   runSequence(
     'clean:dist',
-    ['sass', 'useref', 'images', 'fonts'],
+    ['babel', 'sass', 'useref', 'images', 'fonts'],
     callback
   )
 });

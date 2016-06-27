@@ -2,22 +2,53 @@
   height: 565px;
   background: url(/images/pattern_light.png);
   background-size: 500px 333px;
+    @media screen and (max-width: $break-large) {
+      height: 767px;
+    }
+    @media screen and (max-width: $break-medium) {
+      height: 990px;
+    }
 
   @include element('wrapper_head') {
+    padding-top: 65px;
+    @media screen and (max-width: $break-medium) {
+      padding-top: 33px;
+    }
     p:nth-child(1){
       color: #4e5199;
       font-size: 36px;
       text-align: center;
       margin: 0;
+      @media screen and (max-width: $break-custom) {
+        font-size: 22px;
+      }
     }
     p:nth-child(2){
       color: #666666;
       font-size: 20px;
       text-align: center;
+      @media screen and (max-width: $break-custom) {
+        font-size: 16px;
+      }
     }
+  }
+  @include element('wrapper_card') {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: space-around;
+    box-sizing: border-box;
   }
 
   @include element('wrapper_button') {
+    position: relative;
+    left: 40%;
+    margin-top: 20px;
+      @media screen and (max-width: $break-custom) {
+        position: static;
+      }
     a{
       width: 190px;
       height: 35px;

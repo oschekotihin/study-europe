@@ -29,9 +29,9 @@
 
   @include element('wrapper_left') {
     float: left;
-    width: 30%;
+    width: 32%;
     text-align: left;
-    padding: 50px 0 0 10px;
+    padding: 100px 0 0 30px;
     p{
           font-size: 42px;
       }
@@ -43,6 +43,7 @@
     @include breakpoint ($break-medium) {
         float: none;
         width: 90%;
+        padding: 20px 0 0 10px;
         p{
           font-size: 22px;
           text-align: center;
@@ -50,19 +51,21 @@
      }
     @include breakpoint ($break-landscape) {
       float: none;
-        width: 90%;
-        p{
-          font-size: 22px;
-          text-align: center;
-        }
+      width: 90%;
+      padding: 20px 0 0 10px;
+      p{
+        font-size: 22px;
+        text-align: center;
+      }
     }
     @include breakpoint ($break-small) {
       float: none;
-        width: 90%;
-        p{
-          font-size: 22px;
-          text-align: center;
-        }
+      width: 90%;
+      padding: 20px 0 0 10px;
+      p{
+        font-size: 22px;
+        text-align: center;
+      }
      }
   }
 
@@ -70,7 +73,7 @@
     float: right;
     width: 60%;
     text-align: left;
-    margin: 74px 10px 0 25px;
+    margin: 100px 30px 0 25px;
     @include breakpoint ($break-large) {
       p{
         font-size: 18px;

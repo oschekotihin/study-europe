@@ -16,5 +16,8 @@
   ],
   "dependencies": {
     "bemify": "^0.1.2"
+  },
+  "devDependencies": {
+    "breakpoint-sass": "^2.7.0"
   }
 }

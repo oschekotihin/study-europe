@@ -17,6 +17,7 @@ div {
 	color: #FFF;
   font-family: 'ECSquareSansPro';
   font-weight: 400;
+  font-size: 18px;
 }
 
 a,
@@ -25,7 +26,9 @@ input,
 textarea {
   outline: none;
 }
-
+a:hover{
+  text-decoration: none !important;
+}
 p {
 	margin: 10px 0;
 }

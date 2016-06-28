@@ -63,11 +63,9 @@
 	line-height: 28px;
 }
 .lmore{
-	text-align: right;
+	text-align: center;
 	color: white;
-	text-transform: uppercase;
 	font-family: ecsmedium, sans-serif;
-	letter-spacing: 2px;
 	font-size: 15px;
 }
 .lmore:hover{	
@@ -138,31 +136,41 @@
     max-width: none;
 }
 #start-carousel .carousel-caption, #start-carousel .carousel-caption p{
-	font-size: 24px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
+	font-size: 28px;
 }
 #start-carousel .lmore{
-	text-align: right;
+	text-align: center;
 	color: white;
-	text-transform: uppercase;
 	font-family: ecsmedium, sans-serif;
-	letter-spacing: 2px;
-	font-size: 18px;
+	font-size: 13px;
+  background: #f89c49;
+  padding: 8px 15px;
+  border-radius: 3px;
+  transition: background 1s ease;
+
+  @media (min-width: 540px) {
+    font-size: 16px;
+    padding: 10px 30px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    padding: 15px 50px;
+  }
 }
 #start-carousel .lmore:hover{	
 	color: white;
+  background: #1a97ff;
+  text-decoration: none;
 }
 #start-carousel .lmore span {
     left: 5px;
     top: 3px;
 }
 #start-carousel .carousel-indicators li {
-   
-   
-    height: 15px;
-   
-    width: 15px;
+  height: 15px;
+  width: 15px;
+  margin: 0 12px;
 }
 #start-carousel .carousel-indicators .active {
     background-color: #0b6192;
@@ -219,10 +227,27 @@
 
 #slider {
   .item {
+    img {
+      width: 100%;
+    }
+
     .carousel-caption {
       bottom: auto;
       top: 50%;
       transform: translateY(-50%);
+      width: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, .3);
+
+      p {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+
+      .text-center {
+        margin-top: 40px;
+      }
     }
   }
 }

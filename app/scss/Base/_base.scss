@@ -26,9 +26,12 @@ input,
 textarea {
   outline: none;
 }
-a:hover{
+a:hover, 
+a:focus {
+  color: #fff !important;
   text-decoration: none !important;
 }
+
 p {
 	margin: 10px 0;
 }

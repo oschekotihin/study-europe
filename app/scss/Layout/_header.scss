@@ -151,15 +151,22 @@
       float: left;
       margin-top: 7px;
       margin-right: 10px;
+      transition: background-color 1s ease;
 
       svg {
         width: 32px;
         height: 32px;
+        fill: #034ea2;
+        transition: fill 1s ease;
       }
 
       &:hover{
-        background-color: #1a4b89;
+        background-color: #ccc;
         cursor: pointer;
+
+        svg {
+          fill: #fff;
+        }
       }
 
       @media (min-width: 768px) {
@@ -197,10 +204,20 @@
     border-radius: 50%;
     margin: 8px 0 0 15px;
     display: none;
+    transition: background-color 1s ease;
+
+    svg {
+      fill: #fff;
+      transition: fill 1s ease;
+    }
 
     &:hover{
       background-color: #FFF;
       cursor: pointer;
+
+      svg {
+        fill: #034ea2;
+      }
     }
 
     @media (min-width: 768px) {

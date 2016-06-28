@@ -2,7 +2,7 @@
   background: #1c9bff;
   position: relative;
   padding-top: 30px;
-  @media screen and (max-width: $break-medium) {
+  @include breakpoint ( $break-medium) {
     padding-top: 1px;
   }
 
@@ -32,14 +32,14 @@
     // height: 384px;
     margin-top: -106px;
     padding-bottom: 240px;
-    @media screen and (max-width: $break-large) {
+    @include breakpoint ( $break-large) {
       background-position: 150% 0;
     }
-    @media screen and (max-width: $break-custom) {
+    @include breakpoint ( $break-medium) {
       background-position: 250px 0;
       padding-bottom: 218px;
     }
-    @media screen and (max-width: $break-medium) {
+    @include breakpoint ( $break-small) {
       background-position: center bottom;
       background-size: 50%;
       margin-top: 0;
@@ -56,7 +56,7 @@
       background-size: 100%;
       padding-bottom: 240px;
     }
-    @media screen and (max-width: $break-small) {
+    @include breakpoint ( $break-landscape) {
       background-size: 120%;
       padding-bottom: 210px;
     }
@@ -69,13 +69,13 @@
     top: 165px;
     padding-left: 20px;
     margin-right: 450px;
-    @media screen and (max-width: $break-large) {
+    @include breakpoint ( $break-large) {
       margin-right: 270px;
     }
     @media screen and (max-width: $break-custom) {
       // margin-right: 300px;
     }
-    @media screen and (max-width: $break-medium) {
+    @include breakpoint ( $break-medium) {
       text-align: left;
       top: 0;
       margin-right: 20px;
@@ -94,7 +94,7 @@
   @include element('wrapper_button') {
     position: relative;
     margin-top: 20px;
-    @media screen and (max-width: $break-custom) {
+    @include breakpoint ( $break-medium) {
       position: static;
     }
     a{

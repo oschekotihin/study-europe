@@ -216,3 +216,13 @@
 	line-height: 22px;
 }
 }
+
+#slider {
+  .item {
+    .carousel-caption {
+      bottom: auto;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

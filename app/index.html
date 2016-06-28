@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--build:css css/styles.min.css-->
-    <link rel="stylesheet" href="css/styles.css">
-    <!--endbuild-->
-  </head>
+  <!--build:css css/styles.min.css-->
+  <link rel="stylesheet" href="css/styles.css">
+  <!--endbuild-->
+</head>
 
-  <body>
+<body>
   <header class="header">
     <div class="header__wrapper">
-    <button class="js-menu-show header__menu-toggle"><img src="/images/burger_nav.svg"></button>
+      <button class="js-menu-show header__menu-toggle"><img src="/images/burger_nav.svg"></button>
       <div class="header__wrapper_logo header__section">
-        <img src="/images/headerEUlogo.gif"/>
+        <img src="/images/headerEUlogo.gif" />
         <p>Study in Europe</p>
       </div>
       <nav class="nav">
@@ -33,8 +33,23 @@
         </ul>
       </nav>
       <div class="header__wrapper_search header__section">
-        <input class="search_string" type="search" name="search" placeholder="Search website" />
-        <button class="search_button" type="submit" name="">
+        <div class="search-wrapper">
+          <input class="search_string" type="search" name="search" placeholder="Search website" />
+          <button class="search_button sm-search-btn" type="submit" name="">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/  svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="43px" height="43px" viewBox="0 0 43 43" enable-background="new 0 0 43 43" xml:space="preserve">
+              <path class="search_hover" d="M23.747,13.021c-2.929-2.928-7.679-2.928-10.606,0c-2.929,2.929-2.929,7.679,0,10.607
+                c2.929,2.929,7.678,2.929,10.606,0C26.675,20.7,26.675,15.951,23.747,13.021z M14.905,21.865c-1.955-1.954-1.954-5.125,0-7.079
+                c1.954-1.955,5.125-1.955,7.079,0c1.954,1.955,1.954,5.125,0,7.079C20.03,23.82,16.859,23.82,14.905,21.865z"/>
+              <path class="search_hover" d="M31.764,29.76c0.391,0.393,0.391,1.023,0,1.415l-0.707,0.707c-0.392,0.392-1.023,0.392-1.414,0l-7.192-7.192
+                c-0.392-0.392-0.392-1.022,0-1.414l0.707-0.707c0.391-0.392,1.022-0.392,1.413,0L31.764,29.76z"/>
+            </svg>
+          </button>
+          <button class="close-search-menu js-close-search">
+            close
+          </button>
+        </div>
+        <button class="search_button search-toggler js-search-toggler">
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/  svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           width="43px" height="43px" viewBox="0 0 43 43" enable-background="new 0 0 43 43" xml:space="preserve">
             <path class="search_hover" d="M23.747,13.021c-2.929-2.928-7.679-2.928-10.606,0c-2.929,2.929-2.929,7.679,0,10.607
@@ -44,30 +59,40 @@
               c-0.392-0.392-0.392-1.022,0-1.414l0.707-0.707c0.391-0.392,1.022-0.392,1.413,0L31.764,29.76z"/>
           </svg>
         </button>
+        <button class="search_button search-submit-btn" type="submit" name="">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/  svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="43px" height="43px" viewBox="0 0 43 43" enable-background="new 0 0 43 43" xml:space="preserve">
+            <path class="search_hover" d="M23.747,13.021c-2.929-2.928-7.679-2.928-10.606,0c-2.929,2.929-2.929,7.679,0,10.607
+              c2.929,2.929,7.678,2.929,10.606,0C26.675,20.7,26.675,15.951,23.747,13.021z M14.905,21.865c-1.955-1.954-1.954-5.125,0-7.079
+              c1.954-1.955,5.125-1.955,7.079,0c1.954,1.955,1.954,5.125,0,7.079C20.03,23.82,16.859,23.82,14.905,21.865z"/>
+            <path class="search_hover" d="M31.764,29.76c0.391,0.393,0.391,1.023,0,1.415l-0.707,0.707c-0.392,0.392-1.023,0.392-1.414,0l-7.192-7.192
+              c-0.392-0.392-0.392-1.022,0-1.414l0.707-0.707c0.391-0.392,1.022-0.392,1.413,0L31.764,29.76z"/>
+          </svg>
+        </button>
+        <div class="header__wrapper_user header__section">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="43px" height="43px" viewBox="0 0 43 43" enable-background="new 0 0 43 43" xml:space="preserve">
+            <path class="auth" d="M21.5,24.07c-6.016,0-11.368,2.805-14.85,7.166c3.243,4.729,8.683,7.834,14.85,7.834
+              c6.168,0,11.605-3.104,14.85-7.834C32.868,26.875,27.516,24.07,21.5,24.07z" />
+            <circle class="auth" cx="21.5" cy="14.071" r="8.142" />
+          </svg>
+        </div>
       </div>
-      <div class="header__wrapper_user header__section">
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-           width="43px" height="43px" viewBox="0 0 43 43" enable-background="new 0 0 43 43" xml:space="preserve">
-          <path class="auth"  d="M21.5,24.07c-6.016,0-11.368,2.805-14.85,7.166c3.243,4.729,8.683,7.834,14.85,7.834
-            c6.168,0,11.605-3.104,14.85-7.834C32.868,26.875,27.516,24.07,21.5,24.07z"/>
-          <circle class="auth" cx="21.5" cy="14.071" r="8.142"/>
-        </svg>
-      </div>
-      <div class="clear"></div>
+
+      <!--<div class="clear"></div>-->
     </div>
   </header>
-  
+
   <section id="intro" class="intro">
     <div class="wrapper">
       <div class="intro__wrapper_left">
         <p>European Higher Education Virtual Fair</p>
       </div>
       <div class="intro__wrapper_right">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue
-        lacinia scelerisque. Nam mollis urna massa. Mauris eleifend lorem a turpis sollicitudin id euismod massa euismod.
-        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse quis
-        viverra leo. Nam pharetra facilisis gravida. Nunc ornare aliquam turpis sed viverra. Cras facilisis convallis sem
-        sit amet vestibulum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue lacinia scelerisque. Nam mollis urna massa.
+          Mauris eleifend lorem a turpis sollicitudin id euismod massa euismod. Class aptent taciti sociosqu ad litora torquent
+          per conubia nostra, per inceptos himenaeos. Suspendisse quis viverra leo. Nam pharetra facilisis gravida. Nunc
+          ornare aliquam turpis sed viverra. Cras facilisis convallis sem sit amet vestibulum.</p>
       </div>
   </section>
   <section id="universities" class="universities">
@@ -91,27 +116,32 @@
                       <h6>Italy</h6>
                     </div>
                     <h4 class="result-university"><span>The University of Pavia</span></h4>
-                  </div>
-                  <div class="info">
-                    <h2 class="result-city" style="font-size: 27.375px;">Pavia</h2>
-                    <div class="result-icons">
-                      <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/accounting_and_finance.png?itok=zdAOCo9F" width="20" height="20" alt="">
-                      <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/anatomy_and_physiology.png?itok=WioIF2tT" width="20" height="20" alt="">
-                      <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/art.png?itok=rAFaOEE8" width="20" height="20" alt="">
-                      <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/biosciences.png?itok=Vw0O2fD5" width="20" height="20" alt="">
-                      <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/business_management_and_marketing.png?itok=TZbWXd8X" width="20" height="20" alt="">
-                      <img typeof="foaf:Image" src="/sites/all/themes/ehef/img/icons/plus.png" width="20" height="20" alt="">
-                      <p>3 760 € p.a.</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </span>
+          </div>
+          <div class="info">
+            <h2 class="result-city" style="font-size: 27.375px;">Pavia</h2>
+            <div class="result-icons">
+              <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/accounting_and_finance.png?itok=zdAOCo9F"
+                width="20" height="20" alt="">
+              <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/anatomy_and_physiology.png?itok=WioIF2tT"
+                width="20" height="20" alt="">
+              <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/art.png?itok=rAFaOEE8"
+                width="20" height="20" alt="">
+              <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/biosciences.png?itok=Vw0O2fD5"
+                width="20" height="20" alt="">
+              <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/business_management_and_marketing.png?itok=TZbWXd8X"
+                width="20" height="20" alt="">
+              <img typeof="foaf:Image" src="/sites/all/themes/ehef/img/icons/plus.png" width="20" height="20" alt="">
+              <p>3 760 € p.a.</p>
+            </div>
           </div>
         </div>
-        <div class="views-row views-row-2 col-xxs-12 col-xs-6 col-sm-4">
-          <div>        
-            <span>
+        </a>
+        </span>
+      </div>
+    </div>
+    <div class="views-row views-row-2 col-xxs-12 col-xs-6 col-sm-4">
+      <div>
+        <span>
               <a href="/universities/maynooth-university">
                 <div class="result orange">
                   <div class="name">
@@ -124,28 +154,33 @@
                     </div>
                     <h4 class="result-university">
                       <span>Maynooth University</span>
-                    </h4>
-                  </div>
-                  <div class="info">
-                    <h2 class="result-city" style="font-size: 27.375px;">Maynooth</h2>
-                    <div class="result-icons">
-                      <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/anthropology.png?itok=9E7PyKSQ" width="20" height="20" alt="">      
-                      <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/accounting_and_finance.png?itok=zdAOCo9F" width="20" height="20" alt="">      
-                      <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/biosciences.png?itok=Vw0O2fD5" width="20" height="20" alt="">      
-                      <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/business_management_and_marketing.png?itok=TZbWXd8X" width="20" height="20" alt="">      
-                      <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/chemistry.png?itok=NRtleXdf" width="20" height="20" alt="">      
-                      <img typeof="foaf:Image" src="/sites/all/themes/ehef/img/icons/plus.png" width="20" height="20" alt="">        
-                      <p>12 000 € p.a.</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </span>  
-          </div>  
+        </h4>
+      </div>
+      <div class="info">
+        <h2 class="result-city" style="font-size: 27.375px;">Maynooth</h2>
+        <div class="result-icons">
+          <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/anthropology.png?itok=9E7PyKSQ"
+            width="20" height="20" alt="">
+          <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/accounting_and_finance.png?itok=zdAOCo9F"
+            width="20" height="20" alt="">
+          <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/biosciences.png?itok=Vw0O2fD5"
+            width="20" height="20" alt="">
+          <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/business_management_and_marketing.png?itok=TZbWXd8X"
+            width="20" height="20" alt="">
+          <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/chemistry.png?itok=NRtleXdf"
+            width="20" height="20" alt="">
+          <img typeof="foaf:Image" src="/sites/all/themes/ehef/img/icons/plus.png" width="20" height="20" alt="">
+          <p>12 000 € p.a.</p>
         </div>
-        <div class="views-row views-row-3 col-xxs-12 col-xs-6 col-sm-4">
-          <div>        
-            <span>
+      </div>
+    </div>
+    </a>
+    </span>
+    </div>
+    </div>
+    <div class="views-row views-row-3 col-xxs-12 col-xs-6 col-sm-4">
+      <div>
+        <span>
               <a href="/universities/university-ljubljana-1">
                 <div class="result brown">
                   <div class="name">
@@ -158,29 +193,34 @@
                     </div>
                     <h4 class="result-university">
                       <span>University of Ljubljana</span>
-                    </h4>
-                  </div>
-                  <div class="info">
-                    <h2 class="result-city" style="font-size: 27.375px;">Ljubljana</h2>
-                    <div class="result-icons">
-                      <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/accounting_and_finance.png?itok=zdAOCo9F" width="20" height="20" alt="">      
-                      <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/agriculture_forestry_and_food.png?itok=6c4AKLZi" width="20" height="20" alt="">      
-                      <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/anatomy_and_physiology.png?itok=WioIF2tT" width="20" height="20" alt="">      
-                      <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/anthropology.png?itok=9E7PyKSQ" width="20" height="20" alt="">      
-                      <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/architecture.png?itok=hpo5OmSb" width="20" height="20" alt="">      
-                      <img typeof="foaf:Image" src="/sites/all/themes/ehef/img/icons/plus.png" width="20" height="20" alt="">      
-                      <p>2 500 € p.a.</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </span>  
-          </div>  
-        </div>
-        <div class="universities__wrapper_button">
-          <a href="">All universities</a>
+        </h4>
+      </div>
+      <div class="info">
+        <h2 class="result-city" style="font-size: 27.375px;">Ljubljana</h2>
+        <div class="result-icons">
+          <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/accounting_and_finance.png?itok=zdAOCo9F"
+            width="20" height="20" alt="">
+          <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/agriculture_forestry_and_food.png?itok=6c4AKLZi"
+            width="20" height="20" alt="">
+          <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/anatomy_and_physiology.png?itok=WioIF2tT"
+            width="20" height="20" alt="">
+          <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/anthropology.png?itok=9E7PyKSQ"
+            width="20" height="20" alt="">
+          <img typeof="foaf:Image" src="http://www.study-europe.net/sites/default/files/styles/speciality_small_20x20/public/architecture.png?itok=hpo5OmSb"
+            width="20" height="20" alt="">
+          <img typeof="foaf:Image" src="/sites/all/themes/ehef/img/icons/plus.png" width="20" height="20" alt="">
+          <p>2 500 € p.a.</p>
         </div>
       </div>
+    </div>
+    </a>
+    </span>
+    </div>
+    </div>
+    <div class="universities__wrapper_button">
+      <a href="">All universities</a>
+    </div>
+    </div>
     </div>
   </section>
   <section id="countries" class="countries">
@@ -191,33 +231,33 @@
       </div>
       <div class="countries__wrapper_card">
         <div>
-          <img src="/images/countries/austria.png"/>
+          <img src="/images/countries/austria.png" />
           <p>Austria</p>
         </div>
         <div>
-          <img src="/images/countries/belgium.png"/>
+          <img src="/images/countries/belgium.png" />
           <p>Belgium</p>
         </div>
         <div>
-          <img src="/images/countries/france.png"/>
+          <img src="/images/countries/france.png" />
           <p>France</p>
         </div>
         <div>
-          <img src="/images/countries/malta.png"/>
+          <img src="/images/countries/malta.png" />
           <p>Malta</p>
         </div>
         <div>
-          <img src="/images/countries/netherlands.png"/>
+          <img src="/images/countries/netherlands.png" />
           <p>Netherlands</p>
         </div>
         <div>
-          <img src="/images/countries/poland.png"/>
+          <img src="/images/countries/poland.png" />
           <p>Poland</p>
         </div>
         <div class="countries__wrapper_button">
           <a href="">All countries</a>
         </div>
-      </div> 
+      </div>
     </div>
   </section>
   <section id="subjects" class="subjects">
@@ -228,27 +268,27 @@
       </div>
       <div class="subjects__wrapper_card">
         <div>
-          <img src="/images/subject/finance.png"/>
+          <img src="/images/subject/finance.png" />
           <p>Accounting and Finance</p>
         </div>
         <div>
-          <img src="/images/subject/food.png"/>
+          <img src="/images/subject/food.png" />
           <p>Agriculture, Forestry and Food</p>
         </div>
         <div>
-          <img src="/images/subject/chemistry.png"/>
+          <img src="/images/subject/chemistry.png" />
           <p>Chemistry</p>
         </div>
         <div>
-          <img src="/images/subject/history.png"/>
+          <img src="/images/subject/history.png" />
           <p>Classic and Ancient History</p>
         </div>
         <div>
-          <img src="/images/subject/civil.png"/>
+          <img src="/images/subject/civil.png" />
           <p>Engineering: Civil</p>
         </div>
         <div>
-          <img src="/images/subject/Engineering.png"/>
+          <img src="/images/subject/Engineering.png" />
           <p>Engineering: Electronic and Electrical</p>
         </div>
         <div class="subjects__wrapper_button">
@@ -260,8 +300,8 @@
   <section id="register" class="register">
     <div class="wrapper">
       <div class="register__wrapper">
-        <p>Register and get access to exclusive content and functionalities like chating or Q&A, subscribe to universities
-        and receive their news or participate in live-webinar discussions.</p>
+        <p>Register and get access to exclusive content and functionalities like chating or Q&A, subscribe to universities and
+          receive their news or participate in live-webinar discussions.</p>
         <div class="register__wrapper_button">
           <a href="">Register now</a>
         </div>
@@ -279,15 +319,15 @@
   <footer class="footer">
     footer
   </footer>
-   <aside class="js-side-nav side-nav">
+  <aside class="js-side-nav side-nav">
     <nav class="js-side-nav-container side-nav__container">
       <header class="side-nav__header">
         <div class="sn-icon">
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             width="43px" height="43px" viewBox="0 0 43 43" enable-background="new 0 0 43 43" xml:space="preserve">
-            <path class="auth"  d="M21.5,24.07c-6.016,0-11.368,2.805-14.85,7.166c3.243,4.729,8.683,7.834,14.85,7.834
-              c6.168,0,11.605-3.104,14.85-7.834C32.868,26.875,27.516,24.07,21.5,24.07z"/>
-            <circle class="auth" cx="21.5" cy="14.071" r="8.142"/>
+            <path class="auth" d="M21.5,24.07c-6.016,0-11.368,2.805-14.85,7.166c3.243,4.729,8.683,7.834,14.85,7.834
+              c6.168,0,11.605-3.104,14.85-7.834C32.868,26.875,27.516,24.07,21.5,24.07z" />
+            <circle class="auth" cx="21.5" cy="14.071" r="8.142" />
           </svg>
         </div>
         <span class="sn-label">Sign In</span>
@@ -304,7 +344,8 @@
   </aside>
 
   <script src="/js/side-nav.js"></script>
+  <script src="/js/search.js"></script>
 
-  </body>
+</body>
 
 </html>

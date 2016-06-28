@@ -8,12 +8,15 @@ class Search {
 
     this.showSearch = this.showSearch.bind(this);
     this.hideSearch = this.hideSearch.bind(this);
+    this.resetState = this.resetState.bind(this);
+    this.debounce = this.debounce.bind(this);
     this.addEventListeners();
   }
 
   addEventListeners () {
     this.showSearchEl.addEventListener('click', this.showSearch);
     this.closeSearchEl.addEventListener('click', this.hideSearch);
+    window.addEventListener('resize', this.debounce(this.resetState, 100));
   }
 
   showSearch () {
@@ -23,6 +26,28 @@ class Search {
   hideSearch () {
     this.searchEl.classList.remove('active');
   }
+
+  resetState () {
+    let winWidth = window.innerWidth;
+
+    if(winWidth > 768) {
+      this.hideSearch();
+    }
+  }
+  
+  debounce (f, ms) {
+    let state = null;
+    let COOLDOWN = 1;
+
+    return function() {
+      if (state) return;
+
+      f.apply(this, arguments);
+      state = COOLDOWN;
+      setTimeout(() => { state = null }, ms);
+    }
+  }
+
 }
 
 new Search();

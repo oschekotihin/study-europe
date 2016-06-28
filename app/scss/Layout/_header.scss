@@ -141,9 +141,9 @@
       }
     }
     button{
-      width: 45px;
+      width: 32px;
+      height: 32px;
       padding: 0;
-      height: 45px;
       border: none;
       outline: none;
       background-color: #FFF;
@@ -151,6 +151,12 @@
       float: left;
       margin-top: 7px;
       margin-right: 10px;
+
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+
       &:hover{
         background-color: #1a4b89;
         cursor: pointer;
@@ -158,6 +164,13 @@
 
       @media (min-width: 768px) {
         margin-right: 0;
+        width: 45px;
+        height: 45px;
+
+        svg {
+          width: 45px;
+          height: 45px;
+        }
       }
     }
 
@@ -206,6 +219,46 @@
 
   @media (min-width: 768px) {
     height: 64px;
+  }
+}
+
+.close-search-menu {
+  position: relative;
+  background: transparent !important;
+
+  span {
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translateX(-50%) translateY(-50%);
+    transition: background-color 0.3s;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      transition: transform 0.3s;
+    }
+
+    &::before {
+      transform: translateY(0) rotate(-45deg);
+    }
+
+    &::after {
+      transform: translateY(0) rotate(45deg);
+    }
   }
 }
 

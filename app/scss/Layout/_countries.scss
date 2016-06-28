@@ -2,10 +2,16 @@
   height: 450px;
   background-color: #f89a47;
   position: relative;
-  @media screen and (max-width: $break-large) {
+  @include breakpoint ( $break-medium) {
       height: 510px;
     }
-  @media screen and (max-width: $break-ms) {
+  @include breakpoint ( $break-landscape) {
+    height: 660px;
+  }
+  @include breakpoint ( $break-medium) {
+    height: 660px;
+  }
+  @include breakpoint ( $break-small) {
     height: 660px;
   }
 
@@ -32,28 +38,41 @@
 
   @include element('wrapper_head') {
     padding-top: 65px;
-    @media screen and (max-width: $break-medium) {
+    @include breakpoint ($break-large) {
+      margin-bottom: 35px;
+    }
+    @include breakpoint ($break-medium) {
+      margin-bottom: 35px;
+    }
+    @include breakpoint ($break-landscape) {
       padding-top: 33px;
     }
     p:nth-child(1){
       font-size: 36px;
       text-align: center;
       margin: 0;
-      @media screen and (max-width: $break-medium) {
+      @include breakpoint ($break-landscape) {
           font-size: 22px;
+          margin-top: 2px;
         }
-      @media screen and (max-width: $break-min) {
-        margin-top: 2px;
+      @include breakpoint ($break-small) {
+        font-size: 22px;
       }
     }
     p:nth-child(2){
       font-size: 20px;
       text-align: center;
-      @media screen and (max-width: $break-medium) {
-          font-size: 16px;
+      @include breakpoint ($break-large) {
+        margin-top: 0;
       }
-      @media screen and (max-width: $break-min) {
-        margin-top: 2px;
+      @include breakpoint ($break-medium) {
+        margin-top: 0;
+      }
+      @include breakpoint ($break-landscape) {
+        font-size: 16px;
+      }
+      @include breakpoint ($break-small) {
+        font-size: 16px;
       }
     }
   }
@@ -66,7 +85,16 @@
     align-items: flex-start;
     align-content: space-around;
     padding: 0 20px;
-    @media screen and (max-width: $break-ml) {
+    @include breakpoint ($break-medium) {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      align-content: space-around;
+      padding: 0 20px;
+    }
+    @include breakpoint ($break-landscape) {
       display: flex;
       justify-content: center;
       flex-direction: row;
@@ -76,7 +104,10 @@
     }
     div{
       margin-right: 51px;
-      @media screen and (max-width: $break-min) {
+      @include breakpoint ($break-large) {
+        margin-right: 48px;
+      }
+      @include breakpoint ($break-small) {
         margin: 0;
       }
     }
@@ -97,7 +128,13 @@
     position: relative;
     left: 40%;
     margin-top: 20px;
-    @media screen and (max-width: $break-custom) {
+    @include breakpoint ( $break-medium) {
+      position: static;
+    }
+    @include breakpoint ( $break-landscape) {
+      position: static;
+    }
+    @include breakpoint ( $break-small) {
       position: static;
     }
     @media screen and (max-width: $break-ms) {

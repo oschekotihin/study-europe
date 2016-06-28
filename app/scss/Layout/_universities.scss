@@ -2,16 +2,25 @@
   height: 565px;
   background: url(/images/pattern_light.png);
   background-size: 500px 333px;
-    @media screen and (max-width: $break-large) {
+    @include breakpoint ($break-medium) {
       height: 767px;
     }
-    @media screen and (max-width: $break-ml) {
+    @include breakpoint ($break-landscape) {
+      height: 990px;
+    }
+    @include breakpoint ($break-small) {
       height: 990px;
     }
 
   @include element('wrapper_head') {
     padding-top: 65px;
-    @media screen and (max-width: $break-medium) {
+    @include breakpoint ($break-large) {
+      margin-bottom: 35px;
+    }
+    @include breakpoint ($break-landscape) {
+      padding-top: 33px;
+    }
+    @include breakpoint ($break-small) {
       padding-top: 33px;
     }
     p:nth-child(1){
@@ -19,7 +28,10 @@
       font-size: 36px;
       text-align: center;
       margin: 0;
-      @media screen and (max-width: $break-medium) {
+      @include breakpoint ($break-landscape) {
+        font-size: 22px;
+      }
+      @include breakpoint ($break-small) {
         font-size: 22px;
       }
     }
@@ -27,7 +39,10 @@
       color: #666666;
       font-size: 20px;
       text-align: center;
-      @media screen and (max-width: $break-medium) {
+      @include breakpoint ($break-landscape) {
+        font-size: 16px;
+      }
+      @include breakpoint ($break-small) {
         font-size: 16px;
       }
     }
@@ -41,8 +56,14 @@
     align-content: space-around;
     box-sizing: border-box;
     padding: 0 20px;
-    @media screen and (max-width: $break-ms) {
+    @include breakpoint ($break-medium) {
       justify-content: center;
+    }
+    @include breakpoint ($break-landscape) {
+      justify-content: center;
+    }
+    @include breakpoint ($break-small) {
+      justify-content: flex-start;
     }
   }
 
@@ -50,16 +71,30 @@
     position: relative;
     left: 40%;
     margin-top: 20px;
-      @media screen and (max-width: $break-custom) {
+    @include breakpoint ($break-large) {
+      margin-top: 30px;
+    }
+      @include breakpoint ($break-medium) {
         position: static;
         width: 280px;
         height: 243px;
         background-color: #FFF;
         margin: 0;
+        margin-right: 36px;
       }
-      @media screen and (max-width: $break-mu) {
+      @include breakpoint ( $break-landscape) {
+        position: static;
+        width: 280px;
+        height: 243px;
+        background-color: #FFF;
+        margin: 0;
+        margin-right: 36px;
+      }
+      @include breakpoint ( $break-small) {
         width: auto;
         height: auto;
+        position: static;
+        margin: 0 auto;
       }
     a{
       width: 190px;
@@ -79,10 +114,13 @@
       :hover{
         background: linear-gradient(to top, #f78e3d, #f9a354);
       }
-      @media screen and (max-width: $break-ll) {
+      @include breakpoint ($break-medium) {
           margin-top:30%; 
       }
-      @media screen and (max-width: $break-mu) {
+      @include breakpoint ($break-landscape) {
+          margin-top:30%; 
+      }
+      @include breakpoint ($break-small) {
           margin-top: 0px;
       }
     }

@@ -1,8 +1,18 @@
 .universities__wrapper_card .views-row{
-  margin-right: 40px;
+  margin-right: 36px;
   position: relative;
   min-height: 1px;
   width: 280px;
+  @include breakpoint ($break-landscape) {
+    .universities__wrapper_card .views-row:nth-child(3){
+      margin-right: 0px;
+    }
+  }
+  @include breakpoint ($break-landscape) {
+    .universities__wrapper_card .views-row:nth-child(3){
+      margin-right: 0px;
+    }
+  }
 }
 .universities__wrapper_card .views-row:last-child{
   margin: 0;

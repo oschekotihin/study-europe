@@ -1,12 +1,18 @@
-$break-small: 320px;
-$break-medium: 767px;
-$break-large: 1023px;
-$break-xl: 1440px;
-$break-ll:1018px;
-$break-custom: 950px;
-$break-ml: 720px;
-$break-mu: 698px;
-$break-ms: 522px;
-$break-min: 355px;
-$break-small-landscape: 559px;
+$break-small:;
+$break-medium:;
+$break-large:;
+$break-xl:;
+$break-ll:;
+$break-custom:;
+$break-ml:;
+$break-mu:;
+$break-ms:;
+$break-min:;
+$break-small-landscape:;
+
+$break-small: 320px 559px;
+$break-landscape: 560px 767px;
+$break-medium: 768px 989px;
+$break-large: 990px 1239px;
+
 

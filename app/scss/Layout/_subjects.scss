@@ -2,16 +2,25 @@
   // height: 475px;
   background: url(/images/pattern_light.png);
   background-size: 500px 333px;
-    @media screen and (max-width: $break-large) {
+    @include breakpoint ($break-medium) {
       height: 584px;
     }
-    @media screen and (max-width: $break-ml) {
+    @include breakpoint ($break-landscape) {
+      height: 775px;
+    }
+    @include breakpoint ($break-small) {
       height: 775px;
     }
 
   @include element('wrapper_head') {
     padding-top: 65px;
-    @media screen and (max-width: $break-medium) {
+    @include breakpoint ($break-large) {
+      margin-bottom: 35px;
+    }
+    @include breakpoint ($break-landscape) {
+      padding-top: 33px;
+    }
+    @include breakpoint ($break-small) {
       padding-top: 33px;
     }
     p:nth-child(1){
@@ -19,7 +28,10 @@
     font-size: 36px;
     text-align: center;
     margin: 0;
-      @media screen and (max-width: $break-medium) {
+      @include breakpoint ($break-landscape) {
+        font-size: 22px;
+      }
+      @include breakpoint ($break-landscape) {
         font-size: 22px;
       }
     }
@@ -27,10 +39,14 @@
     color: #666666;
     font-size: 20px;
     text-align: center;
-      @media screen and (max-width: $break-medium) {
+      @include breakpoint ($break-large) {
+        margin-top: 0;
+      }
+      @include breakpoint ($break-landscape) {
         font-size: 16px;
       }
-      @media screen and (max-width: $break-min) {
+      @include breakpoint ($break-small) {
+        font-size: 16px;
         margin-top: 2px;
       }
     }
@@ -44,13 +60,14 @@
   align-items: flex-start;
   align-content: space-around;
   padding: 0 20px;
-    @media screen and (max-width: $break-ml) {
-      display: flex;
+    @include breakpoint ($break-medium) {
+      justify-content: flex-start;
+    }
+    @include breakpoint ($break-landscape) {
       justify-content: center;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      align-content: space-around
+    }
+    @include breakpoint ($break-small) {
+      justify-content: flex-start;
     }
     :after{
     display:block;
@@ -59,7 +76,10 @@
     }
     div{
       margin-right: 51px;
-      @media screen and (max-width: $break-min) {
+      @include breakpoint ($break-large) {
+        margin-right: 48px;
+      }
+      @include breakpoint ($break-small) {
         margin: 0;
       }
       :last-child{
@@ -79,12 +99,17 @@
     left: 40%;
     margin-top: 20px;
     margin-bottom: 58px;
-      @media screen and (max-width: $break-custom) {
+      @include breakpoint ($break-medium) {
         position: static;
         margin: 25px 0 0 30px;
       }
-      @media screen and (max-width: $break-ms) {
+      @include breakpoint ($break-landscape) {
         margin: 0;
+        position: static;
+      }
+      @include breakpoint ($break-small) {
+        margin: 0;
+        position: static;
       }
     a{
       width: 190px;

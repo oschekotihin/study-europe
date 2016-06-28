@@ -1,17 +1,25 @@
 .universities__wrapper_card .views-row{
-  margin-right: 36px;
+  // margin-right: 36px;
   position: relative;
-  min-height: 1px;
-  width: 280px;
+  // min-height: 1px;
+  // width: 280px;
+  flex-basis: 30%;
+  // width: 30%;
+  height: 243px;
+  margin-top: 20px;
+  margin-right: 20px;
   @include breakpoint ($break-landscape) {
     .universities__wrapper_card .views-row:nth-child(3){
       margin-right: 0px;
     }
   }
   @include breakpoint ($break-landscape) {
-    .universities__wrapper_card .views-row:nth-child(3){
-      margin-right: 0px;
-    }
+    flex-basis: 44%;
+  }
+  @include breakpoint ($break-small) {
+    flex-basis: 100%;
+    margin-right: 0;
+    height: auto;
   }
 }
 .universities__wrapper_card .views-row:last-child{
@@ -21,7 +29,7 @@
   text-transform: uppercase;
   position: relative;
   border: 1px solid #fff;
-  height: 235px;
+  // height: 235px;
   overflow: hidden;
   margin-bottom: 15px;
   -webkit-box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.75);
@@ -31,9 +39,17 @@
 .name {
   position: relative;
   height: 160px;
+  @include breakpoint ($break-small) {
+    height: auto;
+  }
 }
-.name img{
+.name img {
   vertical-align: middle;
+  max-width: 100%;
+  @include breakpoint ($break-small) {
+    width: 100%;
+    height: auto;
+  }
 }
 .result-country{
   font-family: ecsregular,sans-serif;

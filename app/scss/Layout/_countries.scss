@@ -44,9 +44,12 @@
       //margin-bottom: 35px;
     }
     @include breakpoint ($break-medium) {
-      margin-bottom: 35px;
+      // margin-bottom: 35px;
     }
     @include breakpoint ($break-landscape) {
+      padding-top: 33px;
+    }
+    @include breakpoint ($break-small) {
       padding-top: 33px;
     }
     p:nth-child(1){
@@ -89,6 +92,10 @@
     @include breakpoint ($break-medium) {}
     @include breakpoint ($break-landscape) {
       justify-content: space-between;
+      padding: 0 20px 40px 20px;
+    }
+    @include breakpoint ($break-small) {
+      padding-bottom: 40px;
     }
     div {
       flex-basis: 16%;
@@ -112,7 +119,7 @@
       padding-top: 0;
       @include breakpoint ($break-landscape) {
         flex-grow: 1;
-        padding-top: 40px;
+        padding-top: 25px;
       }
       @include breakpoint ($break-small) {
         padding-top: 40px;

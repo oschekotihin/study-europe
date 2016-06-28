@@ -1,21 +1,21 @@
 @include block('universities') {
-  height: 565px;
+  // height: 565px;
   background: url(/images/pattern_light.png);
   background-size: 500px 333px;
     @include breakpoint ($break-medium) {
-      height: 767px;
+      // height: 767px;
     }
     @include breakpoint ($break-landscape) {
-      height: 990px;
+      // height: 990px;
     }
     @include breakpoint ($break-small) {
-      height: 990px;
+      // height: 990px;
     }
 
   @include element('wrapper_head') {
     padding-top: 65px;
     @include breakpoint ($break-large) {
-      margin-bottom: 35px;
+      // margin-bottom: 35px;
     }
     @include breakpoint ($break-landscape) {
       padding-top: 33px;
@@ -49,54 +49,50 @@
   }
   @include element('wrapper_card') {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    // justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: space-around;
+    // align-items: flex-start;
+    align-content: space-between;
     box-sizing: border-box;
-    padding: 0 20px;
+    padding: 0 20px 65px 20px;
     @include breakpoint ($break-medium) {
-      justify-content: center;
+      // justify-content: center;
     }
     @include breakpoint ($break-landscape) {
       justify-content: center;
     }
     @include breakpoint ($break-small) {
-      justify-content: flex-start;
+      padding-bottom: 33px;
     }
   }
 
   @include element('wrapper_button') {
     position: relative;
-    left: 40%;
-    margin-top: 20px;
+    flex-basis: 30%;
+    margin-top: 40px;
     @include breakpoint ($break-large) {
       margin-top: 30px;
     }
-      @include breakpoint ($break-medium) {
+      @include breakpoint ($break-landscape) {
+        display: flex;
+        align-items: center;
+        flex-basis: 44%;
         position: static;
-        width: 280px;
+        width: 316px;
         height: 243px;
-        background-color: #FFF;
-        margin: 0;
-        margin-right: 36px;
-      }
-      @include breakpoint ( $break-landscape) {
-        position: static;
-        width: 280px;
-        height: 243px;
-        background-color: #FFF;
-        margin: 0;
-        margin-right: 36px;
+        background-color: #f6f6f6;
+        margin-top: 20px;
+        margin-right: 20px;
       }
       @include breakpoint ( $break-small) {
         width: auto;
         height: auto;
         position: static;
-        margin: 0 auto;
+        margin: 20px auto 0 auto;
       }
-    a{
+    a {
       width: 190px;
       height: 45px;
       display: block;
@@ -111,17 +107,17 @@
       border-radius: 3px;
       margin: 0 auto;
       transition: background 1s ease;
-      :hover{
+      :hover {
         background: linear-gradient(to top, #f78e3d, #f9a354);
       }
       @include breakpoint ($break-medium) {
-          margin-top:30%; 
+          // margin-top:30%; 
       }
       @include breakpoint ($break-landscape) {
-          margin-top:30%; 
+          // margin-top: 30%;
       }
       @include breakpoint ($break-small) {
-          margin-top: 0px;
+          margin-top: 0;
       }
     }
   }  

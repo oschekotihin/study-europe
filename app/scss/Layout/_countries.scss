@@ -1,18 +1,18 @@
 @include block('countries') {
-  height: 450px;
+  // height: 450px;
   background-color: #f89a47;
   position: relative;
   @include breakpoint ( $break-medium) {
-      height: 510px;
-    }
+    // height: 510px;
+  }
   @include breakpoint ( $break-landscape) {
-    height: 660px;
+    // height: 660px;
   }
   @include breakpoint ( $break-medium) {
-    height: 660px;
+    // height: 660px;
   }
   @include breakpoint ( $break-small) {
-    height: 660px;
+    // height: 660px;
   }
 
   &:after {
@@ -38,8 +38,10 @@
 
   @include element('wrapper_head') {
     padding-top: 65px;
+    padding-left: 20px;
+    padding-right: 20px;
     @include breakpoint ($break-large) {
-      margin-bottom: 35px;
+      //margin-bottom: 35px;
     }
     @include breakpoint ($break-medium) {
       margin-bottom: 35px;
@@ -79,44 +81,45 @@
 
   @include element('wrapper_card') {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: space-around;
-    padding: 0 20px;
-    @include breakpoint ($break-medium) {
-      display: flex;
-      justify-content: flex-start;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      align-content: space-around;
-      padding: 0 20px;
-    }
+    align-content: space-between;
+    padding: 0 20px 65px 20px;
+    @include breakpoint ($break-medium) {}
     @include breakpoint ($break-landscape) {
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      align-content: space-around
+      justify-content: space-between;
     }
-    div{
-      margin-right: 51px;
+    div {
+      flex-basis: 16%;
+      text-align: center;
+      padding-top: 40px;
       @include breakpoint ($break-large) {
-        margin-right: 48px;
+        // margin-right: 48px;
+      }
+      @include breakpoint ($break-medium) {
+        // flex-basis: 160px;
+      }
+      @include breakpoint ($break-landscape) {
+        flex-basis: 25%;
       }
       @include breakpoint ($break-small) {
+        flex-basis: 50%;
         margin: 0;
       }
     }
-    div:last-child{
-      margin-right: 0
+    div:last-child {
+      padding-top: 0;
+      @include breakpoint ($break-landscape) {
+        flex-grow: 1;
+        padding-top: 40px;
+      }
+      @include breakpoint ($break-small) {
+        padding-top: 40px;
+      }
     }
-    p{
-      width: 110px;
-      text-align: center;
+    p { 
+      margin-top: 5px;
     }
     &:after{
       content:" ";
@@ -125,9 +128,9 @@
     }
   } 
   @include element('wrapper_button') {
-    position: relative;
-    left: 40%;
-    margin-top: 20px;
+    /*position: relative;
+    left: 40%;*/
+    margin-top: 40px;
     @include breakpoint ( $break-medium) {
       position: static;
     }

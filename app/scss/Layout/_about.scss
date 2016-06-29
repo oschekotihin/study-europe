@@ -3,10 +3,10 @@
   background-color: #4e5199;
   position: relative;
     @include breakpoint ( $break-large) {
-      height: 490px;
+     // height: 490px;
     }
     @include breakpoint ( $break-medium) {
-      height: 490px;
+     // height: 490px;
     }
     @include breakpoint ( $break-landscape) {
       height: 100%;

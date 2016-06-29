@@ -179,6 +179,11 @@
 }
 #start-carousel .carousel-indicators {
     bottom: 0;
+    display: none;
+
+    @media(min-width: 768px) {
+      display: block;
+    }
 }
 #start-carousel .carousel-caption h1{
 	margin: 50px 0;
@@ -221,7 +226,7 @@
 #start-carousel .carousel-caption, #start-carousel .carousel-caption p{
 	font-size: 15px;
 	letter-spacing: 1px;
-	line-height: 22px;
+	line-height: 15px;
 }
 }
 
@@ -232,9 +237,7 @@
     }
 
     .carousel-caption {
-      bottom: auto;
-      top: 50%;
-      transform: translateY(-50%);
+      bottom: 0;
       width: 100%;
       left: 0;
       right: 0;
@@ -243,11 +246,35 @@
       p {
         max-width: 720px;
         margin: 0 auto;
+
+        @media(min-width: 420px) {
+
+        }
       }
 
       .text-center {
-        margin-top: 40px;
+        margin-top: 10px;
+
+        @media(min-width: 540px) {
+          margin-top: 40px;
+        }
       }
+
+      @media(min-width: 768px) {
+        bottom: auto;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+#start-carousel {
+  .carousel-control {
+    display: none;
+
+    @media(min-width: 768px) {
+      display: block;
     }
   }
 }

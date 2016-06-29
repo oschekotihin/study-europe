@@ -2,8 +2,11 @@
   background: #1c9bff;
   position: relative;
   padding-top: 30px;
-  @include breakpoint ( $break-medium) {
+  @include breakpoint ($break-medium) {
     padding-top: 1px;
+  }
+  @include breakpoint ($break-landscape) {
+    padding-top: 18px;
   }
 
   &:before {
@@ -28,74 +31,71 @@
 
   .wrapper {
     background: url(/images/student.png) right top no-repeat;
-    // background-size: auto 100%;
-    // height: 384px;
-    margin-top: -106px;
+    margin-top: -80px;
     padding-bottom: 240px;
-    @include breakpoint ( $break-large) {
+    @include breakpoint ($break-medium) {
       background-position: 150% 0;
+      max-width: 100%;
+      min-height: 385px;
+      margin-top: -50px;
+      padding-bottom: 220px;
     }
-    @include breakpoint ( $break-medium) {
-      background-position: 250px 0;
-      padding-bottom: 218px;
-    }
-    @include breakpoint ( $break-small) {
-      background-position: center bottom;
+    @include breakpoint ($break-landscape) {
       background-size: 50%;
+      background-position: center bottom;
+      padding-bottom: 120px;
       margin-top: 0;
-      padding-bottom: 125px;
     }
-    @media screen and (max-width: $break-small-landscape) {
-      /*background-size: 50%;
-      padding-bottom: 130px;*/
-      /*background-position: center bottom;
-      background-size: 70%;
-      margin-top: 0;*/
-      /*background-size: 120%;
-      padding-bottom: 210px;*/
-      background-size: 100%;
-      padding-bottom: 240px;
-    }
-    @include breakpoint ( $break-landscape) {
+    @include breakpoint ($break-small) {
+      background-position: center bottom;
       background-size: 120%;
-      padding-bottom: 210px;
+      margin-top: 0;
+      padding-bottom: 68%;
     }
   }
 
   @include element('wrapper') {
     text-align: right;
-    // max-width: 605px;
     position: relative;
-    top: 165px;
+    top: 160px;
     padding-left: 20px;
-    margin-right: 450px;
-    @include breakpoint ( $break-large) {
-      margin-right: 270px;
+    margin-right: 430px;
+    @include breakpoint ($break-large) {
+      margin-right: 370px;
     }
-    @media screen and (max-width: $break-custom) {
-      // margin-right: 300px;
+    @include breakpoint ($break-medium) {
+      margin-right: 370px;
     }
-    @include breakpoint ( $break-medium) {
+    @include breakpoint ($break-landscape) {
       text-align: left;
       top: 0;
       margin-right: 20px;
     }
-    @media screen and (max-width: $break-small-landscape) {
-      /*text-align: left;
+    @include breakpoint ($break-small) {
+      text-align: left;
       top: 0;
-      margin-right: 20px;*/
+      margin-right: 20px;
     }
     p {
       font-size: 18px;
       line-height: 25px;
+      @include breakpoint ($break-landscape) {
+        font-size: 16px;
+      }
     }
   }
 
   @include element('wrapper_button') {
     position: relative;
     margin-top: 20px;
-    @include breakpoint ( $break-medium) {
+    @include breakpoint ($break-medium) {
       position: static;
+    }
+    @include breakpoint ($break-landscape) {
+      margin-top: 40px;
+    }
+    @include breakpoint ($break-small) {
+      text-align: center;
     }
     a{
       width: 190px;

@@ -31,9 +31,48 @@
     justify-content: flex-start;
     align-items: flex-start;
     padding-top: 50px;
+    @include breakpoint ($break-large) {
+      justify-content: center;
+    }
+    @include breakpoint ($break-medium) {
+      align-items: center;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+      padding-bottom: 35px;
+    }
+    @include breakpoint ($break-landscape) {
+      align-items: center;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+      padding-bottom: 35px;
+    }
+    @include breakpoint ($break-small) {
+      align-items: flex-start;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+      padding-bottom: 35px;
+      flex-direction: column;
+    }
   }
+
   @include element('menu') {
     flex-basis: 25%;
+
+    @include breakpoint ($break-large) {
+      display: none;
+    }
+    @include breakpoint ($break-medium) {
+      display: none;
+    }
+    @include breakpoint ($break-landscape) {
+      display: none;
+    }
+    @include breakpoint ($break-small) {
+      display: none;
+    }
     li{
       list-style-type: none;
       color: #999999;
@@ -43,6 +82,45 @@
 
   @include element('logo') {
     flex-basis: 25%;
+
+    @include breakpoint ($break-large) {
+      flex-basis: 26%;
+    }
+
+    @include breakpoint ($break-medium) {
+      flex-basis: 100%;
+      text-align: center;
+      img{
+        padding-bottom: 25px;
+        padding-right: 82px;
+      }
+      img:last-child{
+        padding-right: 0;
+      }
+    }
+    @include breakpoint ($break-landscape) {
+      flex-basis: 100%;
+      text-align: center;
+      img{
+        padding-bottom: 25px;
+        padding-right: 9%;
+      }
+      img:last-child{
+        padding-right: 0;
+      }
+    }
+    @include breakpoint ($break-small) {
+      flex-basis: 100%;
+      text-align: center;
+      img{
+        padding-bottom: 25px;
+        padding-right: 9%;
+      }
+      img:last-child{
+        padding-right: 0;
+      }
+    }
+
     img{
       padding-bottom: 25px;
     }
@@ -51,13 +129,60 @@
   @include element('info') {
     flex-basis: 30%;
 
+    @include breakpoint ($break-large) {
+      flex-basis: 30%;
+    }
+    @include breakpoint ($break-medium) {
+      flex-basis: 41%;
+      
+    }
+    @include breakpoint ($break-landscape) {
+      flex-basis: 41%;
+      
+    }
+    @include breakpoint ($break-small) {
+      padding-left: 20px;
+      
+    }
+
     p{
       color: #999999;
     }
   }
+  @include element('authorization') {
+
+    @include breakpoint ($break-large) {
+      display: none;
+    }
+
+    @include breakpoint ($break-medium) {
+      display: none;
+    }
+    @include breakpoint ($break-landscape) {
+      display: none;
+    }
+    @include breakpoint ($break-small) {
+      display: none;
+    }
+  }
+
 
   @include element('search') {
     flex-basis: 27%;
+
+    @include breakpoint ($break-large) {
+      display: none;
+    }
+
+    @include breakpoint ($break-medium) {
+      display: none;
+    }
+    @include breakpoint ($break-landscape) {
+      display: none;
+    }
+    @include breakpoint ($break-small) {
+      display: none;
+    }
 
     input{
       background-color: #2c2e3a;
@@ -79,6 +204,20 @@
   @include element('contact') {
     flex-basis: 21%;
 
+    @include breakpoint ($break-large) {
+      flex-basis: 29%;
+    }
+
+    @include breakpoint ($break-medium) {
+      flex-basis: 43%;
+    }
+    @include breakpoint ($break-landscape) {
+      flex-basis: 43%;
+    }
+    @include breakpoint ($break-small) {
+      padding-left: 20px;
+    }
+
     p{
       color: #999999;
     }
@@ -88,6 +227,7 @@
     background-color: #232323;
 
   }
+
   @include element('disclaimer') {
     display: flex;
     flex-direction: row;
@@ -118,7 +258,7 @@
     @include breakpoint ($break-medium) {
       justify-content: space-around;
       p:nth-child(1){
-      flex-basis: 10%;
+      flex-basis: 15%;
       }
       p:nth-child(2){
         flex-basis: 75%;
@@ -145,6 +285,5 @@
       }
     }
   }
-
 
 }

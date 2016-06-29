@@ -107,8 +107,9 @@
       border-radius: 3px;
       margin: 0 auto;
       transition: background 1s ease;
-      :hover {
+      &:hover {
         background: linear-gradient(to top, #f78e3d, #f9a354);
+        color: #fff;
       }
       @include breakpoint ($break-medium) {
           // margin-top:30%; 

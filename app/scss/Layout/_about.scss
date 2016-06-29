@@ -9,10 +9,10 @@
       height: 490px;
     }
     @include breakpoint ( $break-landscape) {
-      height: 560px;
+      height: 100%;
     }
     @include breakpoint ( $break-small) {
-      height: 560px;
+      height: 100%;
     }
 
   &:after {
@@ -112,6 +112,7 @@
       margin:0 20px;
       width: 90%;
       float: none;
+      padding-bottom: 40px;
       h3{
         font-size: 22px;
       }
@@ -126,6 +127,7 @@
       margin:0 20px;
       width: 85%;
       float: none;
+      padding-bottom: 40px;
       h3{
         font-size: 22px;
       }
